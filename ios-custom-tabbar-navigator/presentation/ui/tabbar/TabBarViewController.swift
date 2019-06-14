@@ -8,13 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class TabBarViewController: UIViewController {
+    
+    var navigator: TabBarNavigator!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
 }
 

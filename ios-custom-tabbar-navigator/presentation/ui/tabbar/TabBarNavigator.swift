@@ -18,11 +18,17 @@ class TabBarNavigator: Navigator {
     
     init(controllerFactory: ControllerFactory) {
         self.controllerFactory = controllerFactory
-        self.viewControllers = []
+        let controller = UIViewController()
+        controller.view.backgroundColor = .green
+        self.viewControllers = [UIViewController(), controller, UIViewController(), UIViewController(), UIViewController()]
     }
     
     func navigate(to destination: TabBarNavigator.Destination) {
         fatalError()
+    }
+    
+    func allViewControllers() -> [UIViewController] {
+        return viewControllers
     }
 }
 

@@ -18,24 +18,93 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8s-qN-tE4">
-                                <rect key="frame" x="0.0" y="782" width="414" height="80"/>
+                                <rect key="frame" x="0.0" y="792" width="414" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="yrU-Ia-P3c">
+                                        <rect key="frame" x="20" y="0.0" width="374" height="70"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zaK-8w-llF">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="70"/>
+                                                <state key="normal" image="sushi"/>
+                                                <connections>
+                                                    <action selector="tabButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dqh-g9-sXw"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="1" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tE3-qY-zbq">
+                                                <rect key="frame" x="79" y="0.0" width="58.5" height="70"/>
+                                                <state key="normal" image="pizza"/>
+                                                <connections>
+                                                    <action selector="tabButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QG7-ub-Cmf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Cl-rb-HKc">
+                                                <rect key="frame" x="157.5" y="0.0" width="59" height="70"/>
+                                                <state key="normal" image="banana"/>
+                                                <connections>
+                                                    <action selector="tabButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vdv-8Z-glP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hl6-xM-edE">
+                                                <rect key="frame" x="236.5" y="0.0" width="58.5" height="70"/>
+                                                <state key="normal" image="wine"/>
+                                                <connections>
+                                                    <action selector="tabButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DfT-Yr-jPm"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVI-7n-cPh">
+                                                <rect key="frame" x="315" y="0.0" width="59" height="70"/>
+                                                <state key="normal" image="beer"/>
+                                                <connections>
+                                                    <action selector="tabButtonPushed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="99M-MX-tkn"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="b8K-1v-Lu2"/>
+                                    <constraint firstItem="yrU-Ia-P3c" firstAttribute="leading" secondItem="b8s-qN-tE4" secondAttribute="leading" constant="20" id="1aV-8m-Mg5"/>
+                                    <constraint firstItem="yrU-Ia-P3c" firstAttribute="top" secondItem="b8s-qN-tE4" secondAttribute="top" id="ANe-zZ-cKx"/>
+                                    <constraint firstAttribute="bottom" secondItem="yrU-Ia-P3c" secondAttribute="bottom" id="Xpc-xI-Sme"/>
+                                    <constraint firstAttribute="height" constant="70" id="b8K-1v-Lu2"/>
+                                    <constraint firstAttribute="trailing" secondItem="yrU-Ia-P3c" secondAttribute="trailing" constant="20" id="gim-p6-85x"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="von-Zm-lg5">
+                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
+                                <color key="backgroundColor" red="0.47684186699999997" green="0.50480759139999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="von-Zm-lg5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8VI-vu-0CA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="von-Zm-lg5" secondAttribute="trailing" id="QSi-qh-JmK"/>
+                            <constraint firstItem="b8s-qN-tE4" firstAttribute="top" secondItem="von-Zm-lg5" secondAttribute="bottom" id="TIZ-Zr-jqN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="b8s-qN-tE4" secondAttribute="bottom" id="Z8j-M8-aMs"/>
                             <constraint firstItem="b8s-qN-tE4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eOZ-iN-c8j"/>
+                            <constraint firstItem="von-Zm-lg5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rky-qg-hPC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b8s-qN-tE4" secondAttribute="trailing" id="yqi-Za-z3i"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="von-Zm-lg5" id="U7p-Dl-y1h"/>
+                        <outletCollection property="buttons" destination="zaK-8w-llF" collectionClass="NSMutableArray" id="vf4-H1-7iA"/>
+                        <outletCollection property="buttons" destination="tE3-qY-zbq" collectionClass="NSMutableArray" id="b48-Hg-k5S"/>
+                        <outletCollection property="buttons" destination="3Cl-rb-HKc" collectionClass="NSMutableArray" id="6bG-nL-JeO"/>
+                        <outletCollection property="buttons" destination="hl6-xM-edE" collectionClass="NSMutableArray" id="ahq-hU-VYu"/>
+                        <outletCollection property="buttons" destination="kVI-7n-cPh" collectionClass="NSMutableArray" id="Qci-LA-IcT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="banana" width="50" height="50"/>
+        <image name="beer" width="50" height="50"/>
+        <image name="pizza" width="50" height="50"/>
+        <image name="sushi" width="50" height="50"/>
+        <image name="wine" width="50" height="50"/>
+    </resources>
 </document>

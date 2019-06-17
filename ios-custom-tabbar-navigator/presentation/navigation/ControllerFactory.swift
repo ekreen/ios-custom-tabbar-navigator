@@ -10,4 +10,5 @@ import UIKit
 
 protocol ControllerFactory {
     func makeTabBarViewController() -> UIViewController
+    func makeSushiViewController() -> UIViewController
 }

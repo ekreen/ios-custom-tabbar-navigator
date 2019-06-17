@@ -14,4 +14,13 @@ class ControllerFactoryImpl: ControllerFactory {
         controller.navigator = TabBarNavigator(controllerFactory: self)
         return controller
     }
+    
+    func makeSushiViewController() -> UIViewController {
+        let controller = UIStoryboard.init(name: "Sushi", bundle: nil).instantiateViewController(withIdentifier: "SushiViewController") as! SushiViewController
+        
+        let rooter = UINavigationController()
+        controller.navigator = SushiNavigator(controllerFactory: self, rooter: rooter)
+        rooter.setViewControllers([controller, UIViewController()], animated: false)
+        return rooter
+    }
 }

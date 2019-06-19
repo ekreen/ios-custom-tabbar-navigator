@@ -20,7 +20,10 @@ class TabBarNavigator: Navigator {
         self.controllerFactory = controllerFactory
         let controller = UIViewController()
         controller.view.backgroundColor = .green
-        self.viewControllers = [controllerFactory.makeSushiViewController(), controller, UIViewController(), UIViewController(), UIViewController()]
+        let label = UILabel()
+        label.text = "Home Controller"
+        controller.view.addSubview(label)
+        self.viewControllers = [controllerFactory.makeSushiViewController(),UIViewController(), controller, UIViewController(), UIViewController(), UIViewController()]
     }
     
     func navigate(to destination: TabBarNavigator.Destination) {

@@ -23,4 +23,20 @@ class ControllerFactoryImpl: ControllerFactory {
         rooter.setViewControllers([controller, UIViewController()], animated: false)
         return rooter
     }
+    
+    func makeMasterViewController() -> UIViewController {
+        let controller = MasterViewController(nibName: nil, bundle: nil)
+        return controller
+    }
+    
+    func makeDetailViewController() -> UIViewController {
+        let controller = DetailViewController(nibName: nil, bundle: nil)
+        return controller
+    }
+    
+    func makeNavigationViewController(with viewControllers: [UIViewController]) -> UIViewController {
+        let navigationController = UINavigationController()
+        navigationController.viewControllers = viewControllers
+        return navigationController
+    }
 }

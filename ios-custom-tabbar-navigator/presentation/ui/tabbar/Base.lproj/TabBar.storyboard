@@ -129,6 +129,7 @@
                     <connections>
                         <outlet property="contentView" destination="von-Zm-lg5" id="U7p-Dl-y1h"/>
                         <outlet property="homeView" destination="K9q-ZZ-NpY" id="V1A-yY-Gew"/>
+                        <outlet property="tabbarView" destination="b8s-qN-tE4" id="6Dn-TU-Gww"/>
                         <outletCollection property="buttons" destination="zaK-8w-llF" collectionClass="NSMutableArray" id="owZ-dI-1So"/>
                         <outletCollection property="buttons" destination="tE3-qY-zbq" collectionClass="NSMutableArray" id="TdS-U7-hs0"/>
                         <outletCollection property="buttons" destination="3Cl-rb-HKc" collectionClass="NSMutableArray" id="Gd5-jX-FFE"/>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80C8BDD2233E40FF00226CAD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8BDD1233E40FF00226CAD /* DetailViewController.swift */; };
+		80C8BDD5233E424800226CAD /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8BDD4233E424800226CAD /* MasterViewController.swift */; };
+		80C8BDD7233E432E00226CAD /* NotificationName+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C8BDD6233E432E00226CAD /* NotificationName+extension.swift */; };
 		A237985F22B40901006DEA16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237985E22B40901006DEA16 /* AppDelegate.swift */; };
 		A237986122B40901006DEA16 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A237986022B40901006DEA16 /* TabBarViewController.swift */; };
 		A237986422B40901006DEA16 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A237986222B40901006DEA16 /* TabBar.storyboard */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		80C8BDD1233E40FF00226CAD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		80C8BDD4233E424800226CAD /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		80C8BDD6233E432E00226CAD /* NotificationName+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotificationName+extension.swift"; sourceTree = "<group>"; };
 		A237985B22B40901006DEA16 /* ios-custom-tabbar-navigator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ios-custom-tabbar-navigator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A237985E22B40901006DEA16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A237986022B40901006DEA16 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +59,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		80C8BDD0233E40E500226CAD /* detail */ = {
+			isa = PBXGroup;
+			children = (
+				80C8BDD1233E40FF00226CAD /* DetailViewController.swift */,
+			);
+			path = detail;
+			sourceTree = "<group>";
+		};
+		80C8BDD3233E423A00226CAD /* master */ = {
+			isa = PBXGroup;
+			children = (
+				80C8BDD4233E424800226CAD /* MasterViewController.swift */,
+			);
+			path = master;
+			sourceTree = "<group>";
+		};
 		A237985222B40901006DEA16 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +127,8 @@
 		A237987822B40DBC006DEA16 /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				80C8BDD3233E423A00226CAD /* master */,
+				80C8BDD0233E40E500226CAD /* detail */,
 				A237988122B41D54006DEA16 /* sushi */,
 				A237987922B40DC2006DEA16 /* tabbar */,
 			);
@@ -125,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				A237987F22B41997006DEA16 /* UIViewController.swift */,
+				80C8BDD6233E432E00226CAD /* NotificationName+extension.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -211,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80C8BDD2233E40FF00226CAD /* DetailViewController.swift in Sources */,
 				A237986122B40901006DEA16 /* TabBarViewController.swift in Sources */,
 				A237985F22B40901006DEA16 /* AppDelegate.swift in Sources */,
 				A237987522B40CD7006DEA16 /* ControllerFactory.swift in Sources */,
@@ -218,7 +244,9 @@
 				A237988322B41D7B006DEA16 /* SushiNavigator.swift in Sources */,
 				A237988722B41F62006DEA16 /* SushiViewController.swift in Sources */,
 				A237987722B40D2A006DEA16 /* ControllerFactoryImpl.swift in Sources */,
+				80C8BDD5233E424800226CAD /* MasterViewController.swift in Sources */,
 				A237987322B40C8A006DEA16 /* Navigator.swift in Sources */,
+				80C8BDD7233E432E00226CAD /* NotificationName+extension.swift in Sources */,
 				A237988022B41997006DEA16 /* UIViewController.swift in Sources */,
 				A237987B22B40E5B006DEA16 /* TabBarNavigator.swift in Sources */,
 			);

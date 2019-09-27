@@ -13,17 +13,20 @@ class TabBarViewController: UIViewController {
     @IBOutlet weak var contentView: UIView!
     @IBOutlet var buttons: [UIButton]!
     @IBOutlet weak var homeView: UIView!
+    @IBOutlet weak var tabbarView: UIView!
     
     var navigator: TabBarNavigator!
     
     var viewControllers: [UIViewController] = []
     private var selectedIndex = 0
+    private var notificationCenter: NotificationCenter = .default
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         viewControllers = navigator.allViewControllers()
         tabButtonPushed(buttons[selectedIndex])
+        notificationCenter.addObserver(self, selector: #selector(tabbarNotification), name: .isTabbarHidden, object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,3 +50,16 @@ class TabBarViewController: UIViewController {
     
 }
 
+private extension TabBarViewController {
+    
+    @objc
+    func tabbarNotification(_ notification: Notification) {
+        guard let value = notification.object as? Bool else {
+            return
+        }
+        
+        //TODO hide or not tabbar
+        tabbarView.isHidden = value
+        homeView.isHidden = value
+    }
+}

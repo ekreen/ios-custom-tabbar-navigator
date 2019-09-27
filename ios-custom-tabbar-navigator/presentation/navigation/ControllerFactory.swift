@@ -11,4 +11,7 @@ import UIKit
 protocol ControllerFactory {
     func makeTabBarViewController() -> UIViewController
     func makeSushiViewController() -> UIViewController
+    func makeMasterViewController() -> UIViewController
+    func makeDetailViewController() -> UIViewController
+    func makeNavigationViewController(with viewControllers: [UIViewController]) -> UIViewController
 }

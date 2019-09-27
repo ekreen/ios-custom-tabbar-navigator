@@ -11,7 +11,7 @@ class TabBarNavigator: Navigator {
     
     private var controllerFactory: ControllerFactory
     private var viewControllers: [UIViewController]
-
+    
     enum Destination {
         case tabBar
     }
@@ -23,7 +23,10 @@ class TabBarNavigator: Navigator {
         let label = UILabel()
         label.text = "Home Controller"
         controller.view.addSubview(label)
-        self.viewControllers = [controllerFactory.makeSushiViewController(),UIViewController(), controller, UIViewController(), UIViewController(), UIViewController()]
+        self.viewControllers = [controllerFactory.makeSushiViewController(),UIViewController(), controller, controllerFactory.makeDetailViewController(), controllerFactory.makeNavigationViewController(with: [
+            controllerFactory.makeMasterViewController(),
+            controllerFactory.makeDetailViewController()])
+        ]
     }
     
     func navigate(to destination: TabBarNavigator.Destination) {

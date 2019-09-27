@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import WebKit
 
 class DetailViewController: UIViewController {
     
     private var notificationCenter: NotificationCenter = .default
+    private var webView: WKWebView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        webView = WKWebView(frame: view.frame)
+        webView?.load(URLRequest(url: URL(string: "https://dev.to/")!))
+        view.addSubview(webView!)
         view.backgroundColor = .yellow
     }
     
@@ -22,8 +27,8 @@ class DetailViewController: UIViewController {
         notificationCenter.post(name: .isTabbarHidden, object: true)
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
         notificationCenter.post(name: .isTabbarHidden, object: false)
     }
 }

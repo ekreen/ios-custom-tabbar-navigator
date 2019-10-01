@@ -16,16 +16,16 @@ class TabBarNavigator: Navigator {
         case tabBar
     }
     
-    init(controllerFactory: ControllerFactory) {
+    init(controllerFactory: ControllerFactory, tabbarDelegate: TabbarDelegate) {
         self.controllerFactory = controllerFactory
         let controller = UIViewController()
         controller.view.backgroundColor = .green
         let label = UILabel()
         label.text = "Home Controller"
         controller.view.addSubview(label)
-        self.viewControllers = [controllerFactory.makeSushiViewController(),UIViewController(), controller, controllerFactory.makeDetailViewController(), controllerFactory.makeNavigationViewController(with: [
+        self.viewControllers = [controllerFactory.makeSushiViewController(),UIViewController(), controller, controllerFactory.makeDetailViewController(tabbarDelegate: tabbarDelegate), controllerFactory.makeNavigationViewController(with: [
             controllerFactory.makeMasterViewController(),
-            controllerFactory.makeDetailViewController()])
+            controllerFactory.makeDetailViewController(tabbarDelegate: tabbarDelegate)])
         ]
     }
     

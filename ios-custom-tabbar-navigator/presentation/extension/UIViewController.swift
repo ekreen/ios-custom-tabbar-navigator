@@ -33,3 +33,8 @@ extension UIViewController {
         removeFromParent()
     }
 }
+
+
+extension UIViewController {
+    weak var test: Bool?
+}

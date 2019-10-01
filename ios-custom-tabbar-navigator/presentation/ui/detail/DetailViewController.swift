@@ -11,8 +11,8 @@ import WebKit
 
 class DetailViewController: UIViewController {
     
-    private var notificationCenter: NotificationCenter = .default
     private var webView: WKWebView?
+    weak var tabbarDelegate: TabbarDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,11 +24,11 @@ class DetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        notificationCenter.post(name: .isTabbarHidden, object: true)
+        tabbarDelegate?.isTabbarHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        notificationCenter.post(name: .isTabbarHidden, object: false)
+        tabbarDelegate?.isTabbarHidden = false
     }
 }

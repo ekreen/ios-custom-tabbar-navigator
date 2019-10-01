@@ -11,7 +11,7 @@ import UIKit
 class ControllerFactoryImpl: ControllerFactory {
     func makeTabBarViewController() -> UIViewController {
         let controller = UIStoryboard.init(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-        controller.navigator = TabBarNavigator(controllerFactory: self)
+        controller.navigator = TabBarNavigator(controllerFactory: self, tabbarDelegate: controller)
         return controller
     }
     
@@ -29,8 +29,9 @@ class ControllerFactoryImpl: ControllerFactory {
         return controller
     }
     
-    func makeDetailViewController() -> UIViewController {
+    func makeDetailViewController(tabbarDelegate: TabbarDelegate) -> UIViewController {
         let controller = DetailViewController(nibName: nil, bundle: nil)
+        controller.tabbarDelegate = tabbarDelegate
         return controller
     }
     

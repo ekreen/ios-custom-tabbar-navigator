@@ -12,6 +12,6 @@ protocol ControllerFactory {
     func makeTabBarViewController() -> UIViewController
     func makeSushiViewController() -> UIViewController
     func makeMasterViewController() -> UIViewController
-    func makeDetailViewController() -> UIViewController
+    func makeDetailViewController(tabbarDelegate: TabbarDelegate) -> UIViewController
     func makeNavigationViewController(with viewControllers: [UIViewController]) -> UIViewController
 }
